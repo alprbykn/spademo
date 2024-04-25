@@ -1,11 +1,9 @@
 package com.example.spademo.repo;
 
 import com.example.spademo.model.Budget;
+import com.example.spademo.model.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.List;
+public interface ProductRepository extends MongoRepository<Product, String> {
 
-public interface BudgetRepository extends MongoRepository<Budget, String> {
-
-    Budget findByName(String budgetName);
 }

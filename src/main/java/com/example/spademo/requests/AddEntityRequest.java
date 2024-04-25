@@ -1,25 +1,22 @@
-package com.example.spademo.model;
+package com.example.spademo.requests;
 
+import com.example.spademo.model.BudgetEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BudgetEntity {
-    @Id
-    public String id;
+public class AddEntityRequest {
 
     @CreatedDate
     public LocalDateTime createdOn;
 
-    public String productName;
-    public Integer amount;
-    public Integer price;
-    public String exchangeRate;
+    public String budgetName;
+    public BudgetEntity entity;
+    public String month;
 }
