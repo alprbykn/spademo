@@ -4,14 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-
-import java.util.HashMap;
-import java.util.List;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MonthEntities {
+@Document(collection = "products")
+public class Expectation {
+    @Id
+    public String id;
+    public String name;
 
-    public HashMap <String, List<BudgetEntity>> entities;
+    public String expectation;
+
 }

@@ -22,6 +22,7 @@ public class Budget {
     public String id;
     public String name;
     public HashMap<String, List<BudgetEntity>> months;
+    public HashMap<String, List<BudgetEntity>> realMonths;
 
     @CreatedDate
     public LocalDateTime createdOn;
